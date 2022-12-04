@@ -1,3 +1,26 @@
+# Camel-Integration-Spring-Boot
+This project implements some basic functionalities of camel integration between 2 microservices.
+
+## Keywords
+
+ - from()
+ - to()
+ - log()
+ - process()
+ - transform()
+ - unmarshal()
+ - Active Mq
+ - docker
+ - timer
+ - file
+
+
+## Documentation
+
+- An Active Mq instance is launched as a docker container where messages will be queued.
+- Microservice A sends messages/files to the Active Mq using Camel Integration to Active Mq endpoint.
+- The queued data is then fetched by Microservice B from Active Mq endpoint for further processing, transformation and transmission to another endpoint that might be a database or file-server.
+- Inside Microservice B, Json data that is fetched, is unmarshalled (extracted), transfomed to JAVA object and then sent to different endpoints for further processing.
 
 ## EIP Patterns
 
